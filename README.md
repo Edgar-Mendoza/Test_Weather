@@ -8,6 +8,11 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
+## References
+
+  * CSV v2.4.1: https://hexdocs.pm/csv/CSV.html
+  * ExOwm v1.2.3: https://hexdocs.pm/ex_owm/ExOwm.html
+
 Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
 ## Learn more

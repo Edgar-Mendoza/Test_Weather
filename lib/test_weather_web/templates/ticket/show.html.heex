@@ -1,0 +1,67 @@
+<h1>Ver Ticket</h1>
+
+<ul>
+  <li>
+    <strong>Origin:</strong>
+    <%= @ticket.origin %>
+  </li>
+
+  <li>
+    <strong>Destination:</strong>
+    <%= @ticket.destination %>
+  </li>
+
+  <li>
+    <strong>Airline:</strong>
+    <%= @ticket.airline %>
+  </li>
+
+  <li>
+    <strong>Flight num:</strong>
+    <%= @ticket.flight_num %>
+  </li>
+
+  <li>
+    <strong>Origin iata code:</strong>
+    <%= @ticket.origin_iata_code %>
+  </li>
+
+  <li>
+    <strong>Origin name:</strong>
+    <%= @ticket.origin_name %>
+  </li>
+
+  <li>
+    <strong>Origin latitude:</strong>
+    <%= @ticket.origin_latitude %>
+  </li>
+
+  <li>
+    <strong>Origin longitude:</strong>
+    <%= @ticket.origin_longitude %>
+  </li>
+
+  <li>
+    <strong>Destination iata code:</strong>
+    <%= @ticket.destination_iata_code %>
+  </li>
+
+  <li>
+    <strong>Destination name:</strong>
+    <%= @ticket.destination_name %>
+  </li>
+
+  <li>
+    <strong>Destination latitude:</strong>
+    <%= @ticket.destination_latitude %>
+  </li>
+
+  <li>
+    <strong>Destination longitude:</strong>
+    <%= @ticket.destination_longitude %>
+  </li>
+</ul>
+
+<span><%= link "Editar", to: Routes.ticket_path(@conn, :edit, @ticket) %></span>
+|
+<span><%= link "<- Atras", to: Routes.ticket_path(@conn, :index) %></span>

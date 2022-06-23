@@ -1,0 +1,10 @@
+<section class="phx-hero">
+  <h1>Subir Reporte</h1>
+  <%= form_for @conn, Routes.ticket_path(@conn, :import), [multipart: true], fn
+  f -> %> <%= file_input f, :csv, accept: ".csv", required: true %>
+
+  <div><%= submit "Importar Tickets" %></div>
+  <% end %>
+</section>
+
+<span><%= link "Reportes", to: Routes.ticket_path(@conn, :index) %></span>

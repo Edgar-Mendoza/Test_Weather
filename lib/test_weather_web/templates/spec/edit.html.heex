@@ -1,0 +1,5 @@
+<h1>Edit Spec</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.spec_path(@conn, :update, @spec)) %>
+
+<span><%= link "Back", to: Routes.spec_path(@conn, :index) %></span>

@@ -1,0 +1,64 @@
+<h1>Reporte de Tickets</h1>
+
+<section class="phx-hero">
+  <div class="flex justify-end mb-2">
+    <%= link to: Routes.spec_path(@conn, :index) do %>
+    <div><%= submit "Calcular Clima" %></div>
+    <% end %>
+  </div>
+</section>
+
+<table>
+  <td>
+    <div style="text-align: left">
+      <span><%= link "Regresar", to: Routes.page_path(@conn, :index) %></span>
+    </div>
+  </td>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Origin</th>
+      <th>Destination</th>
+      <th>Airline</th>
+      <th>Flight num</th>
+      <th>Origin iata code</th>
+      <th>Origin name</th>
+      <th>Origin latitude</th>
+      <th>Origin longitude</th>
+      <th>Destination iata code</th>
+      <th>Destination name</th>
+      <th>Destination latitude</th>
+      <th>Destination longitude</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= for ticket <- @tickets do %>
+    <tr>
+      <td><%= ticket.origin %></td>
+      <td><%= ticket.destination %></td>
+      <td><%= ticket.airline %></td>
+      <td><%= ticket.flight_num %></td>
+      <td><%= ticket.origin_iata_code %></td>
+      <td><%= ticket.origin_name %></td>
+      <td><%= ticket.origin_latitude %></td>
+      <td><%= ticket.origin_longitude %></td>
+      <td><%= ticket.destination_iata_code %></td>
+      <td><%= ticket.destination_name %></td>
+      <td><%= ticket.destination_latitude %></td>
+      <td><%= ticket.destination_longitude %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<table>
+  <td>
+    <div style="text-align: left">
+      <span><%= link "Regresar", to: Routes.page_path(@conn, :index) %></span>
+    </div>
+  </td>
+</table>

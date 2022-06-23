@@ -1,0 +1,59 @@
+<.form let={f} for={@changeset} action={@action}>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <%= label f, :origin %>
+  <%= text_input f, :origin %>
+  <%= error_tag f, :origin %>
+
+  <%= label f, :destination %>
+  <%= text_input f, :destination %>
+  <%= error_tag f, :destination %>
+
+  <%= label f, :airline %>
+  <%= text_input f, :airline %>
+  <%= error_tag f, :airline %>
+
+  <%= label f, :flight_num %>
+  <%= text_input f, :flight_num %>
+  <%= error_tag f, :flight_num %>
+
+  <%= label f, :origin_iata_code %>
+  <%= text_input f, :origin_iata_code %>
+  <%= error_tag f, :origin_iata_code %>
+
+  <%= label f, :origin_name %>
+  <%= text_input f, :origin_name %>
+  <%= error_tag f, :origin_name %>
+
+  <%= label f, :origin_latitude %>
+  <%= text_input f, :origin_latitude %>
+  <%= error_tag f, :origin_latitude %>
+
+  <%= label f, :origin_longitude %>
+  <%= text_input f, :origin_longitude %>
+  <%= error_tag f, :origin_longitude %>
+
+  <%= label f, :destination_iata_code %>
+  <%= text_input f, :destination_iata_code %>
+  <%= error_tag f, :destination_iata_code %>
+
+  <%= label f, :destination_name %>
+  <%= text_input f, :destination_name %>
+  <%= error_tag f, :destination_name %>
+
+  <%= label f, :destination_latitude %>
+  <%= text_input f, :destination_latitude %>
+  <%= error_tag f, :destination_latitude %>
+
+  <%= label f, :destination_longitude %>
+  <%= text_input f, :destination_longitude %>
+  <%= error_tag f, :destination_longitude %>
+
+  <div>
+    <%= submit "Guardar" %>
+  </div>
+</.form>

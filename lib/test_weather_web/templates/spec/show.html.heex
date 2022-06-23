@@ -1,0 +1,56 @@
+<h1>Show Spec</h1>
+
+<ul>
+  <li>
+    <strong>Name:</strong>
+    <%= @spec.name %>
+  </li>
+
+  <li>
+    <strong>Airline:</strong>
+    <%= @spec.airline %>
+  </li>
+
+  <li>
+    <strong>Flight num:</strong>
+    <%= @spec.flight_num %>
+  </li>
+
+  <li>
+    <strong>Origin destiny:</strong>
+    <%= @spec.origin_destiny %>
+  </li>
+
+  <li>
+    <strong>Feels like:</strong>
+    <%= @spec.feels_like %>
+  </li>
+
+  <li>
+    <strong>Humidity:</strong>
+    <%= @spec.humidity %>
+  </li>
+
+  <li>
+    <strong>Pressure:</strong>
+    <%= @spec.pressure %>
+  </li>
+
+  <li>
+    <strong>Temp:</strong>
+    <%= @spec.temp %>
+  </li>
+
+  <li>
+    <strong>Temp max:</strong>
+    <%= @spec.temp_max %>
+  </li>
+
+  <li>
+    <strong>Temp min:</strong>
+    <%= @spec.temp_min %>
+  </li>
+</ul>
+
+<span><%= link "Edit", to: Routes.spec_path(@conn, :edit, @spec) %></span> |
+<span><%= link "Back", to: Routes.spec_path(@conn, :index) %></span>

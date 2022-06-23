@@ -1,0 +1,61 @@
+<h1>Reporte del Clima</h1>
+
+<section class="phx-hero">
+  <div class="flex justify-end mb-2">
+    <%= link to: Routes.export_path(@conn, :create), class: "btn btn-secondary",
+    method: :post do %>
+    <div><%= submit "Exportar Reporte" %></div>
+    <% end %>
+  </div>
+</section>
+
+<table>
+  <td>
+    <div style="text-align: left">
+      <span><%= link "Regresar", to: Routes.ticket_path(@conn, :index) %></span>
+    </div>
+  </td>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Airline</th>
+      <th>Flight num</th>
+      <th>Origin destiny</th>
+      <th>Feels like</th>
+      <th>Humidity</th>
+      <th>Pressure</th>
+      <th>Temp</th>
+      <th>Temp max</th>
+      <th>Temp min</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= for spec <- @specs do %>
+    <tr>
+      <td><%= spec.name %></td>
+      <td><%= spec.airline %></td>
+      <td><%= spec.flight_num %></td>
+      <td><%= spec.origin_destiny %></td>
+      <td><%= spec.feels_like %></td>
+      <td><%= spec.humidity %></td>
+      <td><%= spec.pressure %></td>
+      <td><%= spec.temp %></td>
+      <td><%= spec.temp_max %></td>
+      <td><%= spec.temp_min %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<table>
+  <td>
+    <div style="text-align: left">
+      <span><%= link "Regresar", to: Routes.ticket_path(@conn, :index) %></span>
+    </div>
+  </td>
+</table>

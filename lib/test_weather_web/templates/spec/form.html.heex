@@ -1,0 +1,51 @@
+<.form let={f} for={@changeset} action={@action}>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <%= label f, :name %>
+  <%= text_input f, :name %>
+  <%= error_tag f, :name %>
+
+  <%= label f, :airline %>
+  <%= text_input f, :airline %>
+  <%= error_tag f, :airline %>
+
+  <%= label f, :flight_num %>
+  <%= text_input f, :flight_num %>
+  <%= error_tag f, :flight_num %>
+
+  <%= label f, :origin_destiny %>
+  <%= text_input f, :origin_destiny %>
+  <%= error_tag f, :origin_destiny %>
+
+  <%= label f, :feels_like %>
+  <%= text_input f, :feels_like %>
+  <%= error_tag f, :feels_like %>
+
+  <%= label f, :humidity %>
+  <%= text_input f, :humidity %>
+  <%= error_tag f, :humidity %>
+
+  <%= label f, :pressure %>
+  <%= text_input f, :pressure %>
+  <%= error_tag f, :pressure %>
+
+  <%= label f, :temp %>
+  <%= text_input f, :temp %>
+  <%= error_tag f, :temp %>
+
+  <%= label f, :temp_max %>
+  <%= text_input f, :temp_max %>
+  <%= error_tag f, :temp_max %>
+
+  <%= label f, :temp_min %>
+  <%= text_input f, :temp_min %>
+  <%= error_tag f, :temp_min %>
+
+  <div>
+    <%= submit "Save" %>
+  </div>
+</.form>
